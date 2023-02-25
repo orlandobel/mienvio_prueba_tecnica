@@ -1,0 +1,14 @@
+1. Asegurate que tienes composer, php y mysql instalados y encendidos
+2. Con una consola de comandos, en el directorio "prueba_mienvio" ejecuta el siguiente comando para instalar los paquetes necesarios para el funcionamiento de la aplicación
+	composer update
+3. Crea una copia del archivo ".env.example" y guardalo en la misma carpeta como ".env"
+4. Ejecuta el siguiente comando para instalar la llave que permite el funcionamiento de la applicación:
+	php artisan key:generate --ansi
+4. En el archivo ".env", coloca en los campos señalados el usuario y contraseña configurados en tu instalación de MySQL para el uso de esta aplicacion. O en su defecto, el usuario y contraseña del administrador maestro
+   Si el la instalación de MySQL no tiene usuario y contraseña configurados se pueden dejar en blanco
+	Campos:
+		DB_USERNAME
+		DB_PASSWORD
+5. Importa el archivo "db_prueba_tecnica.sql" al gestor de bases de datos
+6. Para iniciar el servidor ejecuta el siguiente comando en una consola dentro de la carpeta "prueba_mienvio"
+	php artisan serve
